@@ -11,7 +11,7 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
 ## **System Overview**
 
 ### **System Requirement**
-- 2 servers
+- Two servers
   - IP reachable each other
   - Having mirror disk
     - At least 2 partitions are required on each mirror disk.

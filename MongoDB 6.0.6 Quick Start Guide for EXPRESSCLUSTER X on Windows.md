@@ -90,7 +90,7 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
         MDBfailover
         Fip                  : Floating IP resource
         md                   : mirror disk resource
-        mongodbservice       : service resource for MongoDB Server(MongoDB)
+        
         
 ### **4. Start group on Primary server**
 
@@ -157,8 +157,8 @@ storage:
   - On Command Prompt
         > services.msc
 - Change the startup type of MongoDB Service to Manual.
-
-- Add the service resource to control MongoDB and configure in Config mode of the Cluster WebUI.  
+- Add the service resource to control MongoDB and configure in Config mode of the Cluster WebUI.
+- mongodbservice       : service resource for MongoDB Server(MongoDB)
 - Execute Apply the Configuration File in Config mode of the Cluster WebUI.
 
           

@@ -30,7 +30,7 @@ Achieving MongoDB high availability By using EXPRESSCLUSTER X.
   - mirror disk monitor resource
   - mongoDB custom monitor resource
 
-MongoDB setup
+MongoDB Setup
 ---
 Please note that the following points are different if you set mongoDB to EXPRESSCLUSTER.
 - Database have to create Mirror disk that managed by EXPRESSCLUSTER.

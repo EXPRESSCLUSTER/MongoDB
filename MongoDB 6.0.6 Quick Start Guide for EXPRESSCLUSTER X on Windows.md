@@ -65,7 +65,7 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
 	- Group resource
 		- Fip                  : Floating IP address resource
 		- md                   : mirror disk resource
-		- mongodbservice       : service resource for MongoDB Server (MongoDB)
+		
 
 - Monitor resource
 
@@ -122,7 +122,7 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
 1. Installation Directory
     - Specify the local directory (C: drive) as **Installation Directory**.
     - e.g. *C:\Program Files\MongoDB\Server\6.0*
-1. Choose satup type
+1. Choose setup type
     - Complete
 1. Data Directory
     - Specify the local directory (C: drive) as **Data Directory**.
@@ -147,6 +147,14 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
 ```
 storage:
      dbPath: D:\data
+# for Node1
+net:
+  bindIp: "127.0.0.1,10.0.7.85,10.0.7.193"
+```
+```
+# for Node2
+net:
+  bindIp: "127.0.0.1,10.0.7.86,10.0.7.193"
 ```
 - Save the changes in mongod.cfg and start MongoDB service from services.msc.
 

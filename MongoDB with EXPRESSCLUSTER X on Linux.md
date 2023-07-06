@@ -12,13 +12,13 @@ Configuration
 In this setup, create 2 nodes (Node1 and Node2 as below) mirror disk type cluster.
 Achieving MongoDB high availability By using EXPRESSCLUSTER X. 
 
-### Software versions
+### Software Versions
 - MongoDB 6.0 (internal version:6.0.4)            
 - CLUSTERPRO X 5.1 for Linux 
 - CLUSTERPRO X Replicator for Linux
 - CLUSTERPRO X Database Agent for Linux
 
-### Cluster configurations
+### Cluster Configurations
 - Group resources
 - Exec resource
 - Floting IP resource
@@ -43,7 +43,7 @@ Procedure
 
 - We assume the following 2node cluster and explain it.
 
-    ### cluster information
+    ### Cluster Information
     ||Node1(Active)|Node2(Standby)|
     |---|---|---|
     |Server name|Server1|Server2|
@@ -51,7 +51,7 @@ Procedure
     |Cluster partition|/dev/sdb1|/dev/sdb1|
     |Data partition|/dev/sdc1|/dev/sdc1|
   
-    ### failover group information  
+    ### Failover Group Information  
     |parameter|value|
     |---|---|
     |Name|failover1|
@@ -91,8 +91,6 @@ Procedure
             
     OR  
        
-
-       
       Note :- Please visit [this site](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/) if any problems arise with the installation and setup of mongoDB
 
     
@@ -125,8 +123,6 @@ Procedure
 
         
               
-              
-     
 5. MongoDB Setup (Node1)
         
     - Run the mongoDB service.

@@ -18,7 +18,7 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
     - Cluster partition size depends on ECX version.
     - X 5.1 or later: 1024MB
     - Data partition size depends on Database sizing.
-- MongoDB Database are installed on local partition on each server.
+- MongoDB Database is installed on local partition on each server.
 
 ### **System Configuration**
 - Windows Server 2022 Standard

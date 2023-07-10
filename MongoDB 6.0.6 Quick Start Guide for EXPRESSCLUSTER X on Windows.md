@@ -145,16 +145,18 @@ For the detailed information of EXPRESSCLUSTER X, please refer to [this site](ht
 - Open the configuration file in a text editor and modify the MongoDB configuration file with storage location.
 - The MongoDB configuration file (mongod.cfg) is located at: (C:\ProgramFiles\MongoDB\Server\6.0\bin) in windows.
 ```
-storage:
-     dbPath: D:\data
 # for Node1
 net:
   bindIp: "127.0.0.1,10.0.7.85,10.0.7.193"
+storage:
+     dbPath: D:\data
 ```
 ```
 # for Node2
 net:
   bindIp: "127.0.0.1,10.0.7.86,10.0.7.193"
+storage:
+     dbPath: D:\data
 ```
 - Save the changes in mongod.cfg and start MongoDB service from services.msc.
 

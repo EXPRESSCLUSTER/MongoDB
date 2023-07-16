@@ -14,9 +14,8 @@ Achieving MongoDB high availability By using EXPRESSCLUSTER X.
 
 ### Software Versions
 - MongoDB 6.0 (internal version:6.0.4)            
-- CLUSTERPRO X 5.1 for Linux 
-- CLUSTERPRO X Replicator for Linux
-- CLUSTERPRO X Database Agent for Linux
+- EXPRESSCLUSTER X 5.1 for Linux 
+- EXPRESSCLUSTER X Replicator for Linux
 
 ### Cluster Configurations
 - Group resources
@@ -24,11 +23,11 @@ Achieving MongoDB high availability By using EXPRESSCLUSTER X.
 - Floting IP resource
 - Mirror disk resource
   
-- Monitor rerources
-  - floting IP resource
-  - mirror disk connect monitor resource
-  - mirror disk monitor resource
-  - mongoDB custom monitor resource
+### Monitor rerources
+- Floting IP resource
+- Mirror disk connect monitor resource
+- Mirror disk monitor resource
+- MongoDB custom monitor resource
 
 MongoDB Setup
 ---
@@ -73,21 +72,24 @@ Procedure
       
       Create a **/etc/yum.repos.d/mongodb-org-6.0.repo** file so that you can install MongoDB directly using yum:
 
-      
-      >[mongodb-org-6.0]  
-      >name=MongoDB Repository
-      >baseurl=https://repo.mongodb.org/yum/redhat/>$releasever/mongodb-org/6.0/x86_64/  
-      >gpgcheck=1   
-      >enabled=1
-      >gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
+   ```
+      [mongodb-org-6.0]  
+      name=MongoDB Repository
+      baseurl=https://repo.mongodb.org/yum/redhat/>$releasever/mongodb-org/6.0/x86_64/  
+      gpgcheck=1   
+      enabled=1
+      gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
+
+    ```
       
     - Install the MongoDB packages using Yum
       1. yum install -y mongodb-org
-      2. yum install -y mongodb-org-6.0.4           
-      3. yum install -y mongodb-org-database-6.0.4
-      4. yum install -y mongodb-org-server-6.0.4
-      5. yum install -y mongodb-org-mongos-6.0.4
-      6. yum install -y mongodb-org-tools-6.0.4
+         All dependent packages includes
+        - yum install -y mongodb-org-6.0.4           
+        - yum install -y mongodb-org-database-6.0.4
+        - yum install -y mongodb-org-server-6.0.4
+        - yum install -y mongodb-org-mongos-6.0.4
+        - yum install -y mongodb-org-tools-6.0.4
             
     OR  
        
@@ -117,7 +119,7 @@ Procedure
         
     - Edit the configuration file  and modify the following fields accordingly: (/etc/mongod.conf).
 
-         > storage.dbPath to specify a new data directory path (e.g. /mnt/md1/mongoDB)
+         > storage.dbPath to specify a new data directory path (e.g. /mnt/md1/mongo)
 
          > systemLog.path to specify a new log file path (e.g. /some/log/directory/mongod.log)
 
@@ -135,7 +137,7 @@ Procedure
         ```
     - Create database named db_test.
         ```
-        -> Use db_test
+        -> use db_test
         ```        
     - Create Collection
         ```     

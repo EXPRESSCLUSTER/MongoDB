@@ -84,12 +84,7 @@ Procedure
       
     - Install the MongoDB packages using Yum
       1. yum install -y mongodb-org
-         All dependent packages includes
-        - yum install -y mongodb-org-6.0.4           
-        - yum install -y mongodb-org-database-6.0.4
-        - yum install -y mongodb-org-server-6.0.4
-        - yum install -y mongodb-org-mongos-6.0.4
-        - yum install -y mongodb-org-tools-6.0.4
+      
             
     OR  
        

@@ -19,15 +19,14 @@ Achieving MongoDB high availability By using EXPRESSCLUSTER X.
 
 ### Cluster Configurations
 - Group resources
-- Exec resource
-- Floting IP resource
-- Mirror disk resource
-  
-### Monitor rerources
-- Floting IP resource
-- Mirror disk connect monitor resource
-- Mirror disk monitor resource
-- MongoDB custom monitor resource
+  - Exec resource
+  - Floating IP resource
+  - Mirror disk resource
+- Monitor resources
+  - Floating IP monitor resource
+  - Mirror disk connect monitor resource
+  - Mirror disk monitor resource
+  - MongoDB custom monitor resource
 
 MongoDB Setup
 ---
@@ -75,7 +74,7 @@ Procedure
    ```
       [mongodb-org-6.0]  
       name=MongoDB Repository
-      baseurl=https://repo.mongodb.org/yum/redhat/>$releasever/mongodb-org/6.0/x86_64/  
+      baseurl=https://repo.mongodb.org/yum/redhat/$releaseve/mongodb-org/6.0/x86_64/  
       gpgcheck=1   
       enabled=1
       gpgkey=https://www.mongodb.org/static/pgp/server-6.0.asc
@@ -99,7 +98,7 @@ Procedure
         # mkdir -p /mnt/md1/mongo
         ``` 
 
-    - Coping mongoDB data from default location to Mirror Disk.
+    - Copying mongoDB data from default location to Mirror Disk.
       
       ```
       # systemctl status mongod.service
@@ -188,7 +187,7 @@ Procedure
             -  In the case of stop.sh  -> Immediately after "$CLP_DISK" = "SUCCESS", add the "systemctl stop mongod.service"
            
       - Add the mongoDB custom monitor resource
-          - Configure the folloing parameters
+          - Configure the following parameters
 
               |parameter|value|
               |---|---|
